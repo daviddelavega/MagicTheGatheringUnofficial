@@ -11,6 +11,7 @@ namespace MagicTheGathering.Engine
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The single responsibility of the GameManager class is to coordinate the Game's progress from start thru each player's turn.
      */
     public class GameManager
     {

@@ -11,6 +11,7 @@ namespace MagicTheGathering.Engine
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Single Responsibility of the GameEngine class is to facilitate a Player's Game Actions
      */
     public class GameEngine : Planeswalker
     {

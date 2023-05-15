@@ -7,6 +7,7 @@ namespace MagicTheGathering.Engine
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The single responsibility of the GameState class is to maintain who is playing the game.
      */
     public class GameState
     {

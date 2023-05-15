@@ -8,6 +8,7 @@ namespace MagicTheGathering.Engine
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * This Interface is secluded to definining all the attributes of a Player i.e. Planeswalker
      */
     public interface Planeswalker
     {

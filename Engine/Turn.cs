@@ -8,6 +8,7 @@ namespace MagicTheGathering.Engine
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The single responsibility of the Turn class is to facilitate each Player's Turn phase
      */
     public class Turn
     {

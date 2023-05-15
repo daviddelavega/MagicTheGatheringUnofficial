@@ -6,6 +6,7 @@ namespace MagicTheGathering.Engine
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The single responsibility of the TurnOrder class is to coordinate the the Game's Turn Order for each player.
      */
     public class TurnOrder
     {
