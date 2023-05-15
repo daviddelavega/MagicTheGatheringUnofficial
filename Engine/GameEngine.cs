@@ -82,14 +82,24 @@ namespace MagicTheGathering.Engine
         private void PlaySpell(Collection<MagicCard> playableCards)
         {
             var rand = Random.Next(playableCards.Count);
+            MagicCard magicCard = playableCards[rand];
 
-            if (playableCards[rand].CardType == CardType.Creature)
-            {
-                Battlefield.Play(Hand.Play(playableCards[rand]));
+            if (magicCard.CardType == CardType.Creature)
+            {                
+                Battlefield.Play(Hand.Play(magicCard));
             }
             else
             {
-                Cast(Hand.Play(playableCards[rand]));
+                Cast(Hand.Play(magicCard));
+            }
+
+            Console.WriteLine($"{this.PlayerName} Tapped Card: {magicCard.Name}");
+            Console.ReadLine();
+
+            Console.WriteLine($"{this.PlayerName}'s Tapped Cards:");
+            foreach (MagicCard _card in Battlefield.Cards)
+            {
+                Console.WriteLine($"{_card.Name}");
             }
         }
 
