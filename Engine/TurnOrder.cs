@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace MagicTheGathering.Engine
+﻿namespace MagicTheGathering.Engine
 {
     /*
      * Author: David DLVega

@@ -5,6 +5,7 @@ namespace MagicTheGathering.Phases
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Single responsibility of the BeginningPhase class is to define the portion of the Turn called Beginning phase
      */
     public class BeginningPhase : IPhase
     {

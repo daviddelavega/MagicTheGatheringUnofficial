@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace MagicTheGathering.Utilities
+﻿namespace MagicTheGathering.Utilities
 {
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The single responsibility of the ASCIIArt class is to help display simple game graphics onto the console.
      */
     public class ASCIIArt
     {

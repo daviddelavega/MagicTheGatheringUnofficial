@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MagicTheGathering.Cards
+﻿namespace MagicTheGathering.Cards
 {
     /*
      * Author: David DLVega

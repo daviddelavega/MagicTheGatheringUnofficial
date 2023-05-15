@@ -1,5 +1,4 @@
 ﻿using MagicTheGathering.Cards;
-using System;
 using System.Collections.ObjectModel;
 
 namespace MagicTheGathering

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MagicTheGathering.Cards
+﻿namespace MagicTheGathering.Cards
 {
     /*
      * Author: David DLVega

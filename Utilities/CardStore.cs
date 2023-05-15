@@ -1,12 +1,13 @@
 ﻿using MagicTheGathering.Cards;
 using MagicTheGathering.Models;
-using System.Collections.Generic;
 
 namespace MagicTheGathering.Utilities
 {
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Single Responsibility of the CardStore class is to
+     * Manage All Magic Card Models and return the requested Model Type to the caller
      */
     public sealed class CardStore
     {

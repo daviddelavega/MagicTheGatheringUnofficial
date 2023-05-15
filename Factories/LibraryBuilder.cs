@@ -2,23 +2,22 @@
 using MagicTheGathering.Models;
 using MagicTheGathering.Tabletop;
 using MagicTheGathering.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace MagicTheGathering.Factories
 {
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Single Responsibility of the Library builder is to
+     * fully build and shuffle each Player's Magic The Gathering Library by working with the proper Concrete factory.
      */
     public class LibraryBuilder
     {
-        private List<PlayerModel> players;
+        private List<PlayerModel> Players;
 
         public LibraryBuilder WithLibraryData(string librariesFile)
         {
-            this.players = YamlReader.ReadPlayerData(librariesFile);        
+            this.Players = YamlReader.ReadPlayerData(librariesFile);        
             
             return this;
         }
@@ -28,7 +27,7 @@ namespace MagicTheGathering.Factories
             MagicCardFactory magicCardFactory = null;
             List<Library> libraries = new();
 
-            foreach (var playerModel in this.players) 
+            foreach (var playerModel in this.Players) 
             {
                 List<MagicCard> magicCards = new();                
 

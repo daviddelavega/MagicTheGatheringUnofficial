@@ -1,5 +1,4 @@
 ﻿using MagicTheGathering.Cards;
-using System.Collections.Generic;
 
 namespace MagicTheGathering.Tabletop
 {

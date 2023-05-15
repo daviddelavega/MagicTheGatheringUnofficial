@@ -2,9 +2,9 @@
   library:
     - cardType: Creature
       cards:
-        Shivan Dragon: 3
+        Shivan Dragon: 4
         Snapcaster Mage: 4
-        Sentinel Spider: 5
+        Sentinel Spider: 6
         Ilysian Caryatid: 5        
     - cardType: Land
       cards:
@@ -30,11 +30,11 @@
       cards:
         Shivan Dragon: 3
         Snapcaster Mage: 4
-        Sentinel Spider: 5
+        Sentinel Spider: 7
         Ilysian Caryatid: 5        
     - cardType: Land
       cards:
-        Forest: 10     
+        Forest: 15     
         Mountain: 10    
         Island: 10
     - cardType: Sorcery

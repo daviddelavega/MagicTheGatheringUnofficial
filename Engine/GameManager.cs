@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using MagicTheGathering.Factories;
 using MagicTheGathering.Tabletop;
 using MagicTheGathering.Utilities;
@@ -17,15 +14,21 @@ namespace MagicTheGathering.Engine
     {
         private Game currentGame;
         private ICollection<Planeswalker> players = new Collection<Planeswalker>();
+        private string LibraryDataFile;
 
-        public void StartGame(string libraryDataFile)
+        public GameManager(string _libraryDataFile)
+        {
+            this.LibraryDataFile = _libraryDataFile;
+        }
+
+        public void StartGame()
         {
             ASCIIArt.DisplayStartGameMessage();
             do
             {
                 List<Library> libraries =
                     new LibraryBuilder()
-                    .WithLibraryData(libraryDataFile)
+                    .WithLibraryData(this.LibraryDataFile)
                     .Build();
 
                 Console.WriteLine($"{libraries[0].UserName} Versus {libraries[1].UserName}\n");

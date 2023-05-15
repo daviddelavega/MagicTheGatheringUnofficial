@@ -1,12 +1,13 @@
 ﻿using MagicTheGathering.Cards;
 using MagicTheGathering.Engine;
-using System.Linq;
 
 namespace MagicTheGathering.Phases
 {
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Single responsibility of the CombatPhase class is to define the portion of the Turn called Combat phase
+     * It facilitates the Fighting 
      */
     public class CombatPhase : IPhase
     {

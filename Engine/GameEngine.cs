@@ -1,9 +1,6 @@
-﻿using System;
-using MagicTheGathering.Zones;
+﻿using MagicTheGathering.Zones;
 using System.Collections.ObjectModel;
-using System.Linq;
 using MagicTheGathering.Cards;
-using System.Collections.Generic;
 using MagicTheGathering.Tabletop;
 
 namespace MagicTheGathering.Engine
@@ -70,7 +67,7 @@ namespace MagicTheGathering.Engine
         public void Damage(CreatureCard card)
         {
             HitPoints -= card.Power;
-            Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerOne().PlayerName}'s CreatureCard:\n");
+            Console.WriteLine($"{GameState.GetInstance.PlayerOne().PlayerName}'s CreatureCard:\n");
             card.Display();
             Console.WriteLine($"afflicted DAMAGE of {card.Power} to Planeswalker {PlayerName}.");
             Console.Write("Current GameState:\n");

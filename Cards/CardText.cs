@@ -3,6 +3,7 @@
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * Enum that will store the CardText Keys found on cards. This will help facilitate the Special Abilities that are found in CardText
      */
     public enum CardText
     {

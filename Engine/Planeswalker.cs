@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using MagicTheGathering.Cards;
+﻿using MagicTheGathering.Cards;
 using MagicTheGathering.Tabletop;
 using MagicTheGathering.Zones;
 

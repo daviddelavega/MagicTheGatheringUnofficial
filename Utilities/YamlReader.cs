@@ -1,8 +1,6 @@
 ﻿using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
-using System.Collections.Generic;
 using MagicTheGathering.Models;
-using System.IO;
 
 namespace MagicTheGathering.Utilities
 {

@@ -1,6 +1,4 @@
 ﻿using MagicTheGathering.Models;
-using System;
-using System.Collections.Generic;
 using MagicTheGathering.Utilities;
 
 namespace MagicTheGathering.Cards

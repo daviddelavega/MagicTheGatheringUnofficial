@@ -1,6 +1,5 @@
 ﻿using MagicTheGathering.Models;
 using MagicTheGathering.Utilities;
-using System;
 
 namespace MagicTheGathering.Cards
 {
@@ -12,7 +11,7 @@ namespace MagicTheGathering.Cards
     {       
         private protected string LandType { get; set; }
 
-        private protected Color Color { get; set; }
+        private protected Mana Color { get; set; }
 
         public LandCard(CardType cardType) : base(cardType) { }
 
@@ -39,7 +38,7 @@ namespace MagicTheGathering.Cards
             return this;
         }
 
-        public LandCard SetColor(Color _color)
+        public LandCard SetColor(Mana _color)
         {
             this.Color = _color;
             return this;

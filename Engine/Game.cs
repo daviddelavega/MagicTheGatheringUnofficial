@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace MagicTheGathering.Engine
+﻿namespace MagicTheGathering.Engine
 {
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Single Responsibility of the Game class is to further facilitate the each player's tun in the game.
      */
     public class Game
     {
