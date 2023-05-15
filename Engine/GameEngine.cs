@@ -19,23 +19,22 @@ namespace MagicTheGathering.Engine
         public Library Library { get; set; }
         public Hand Hand { get; set; }
         public Graveyard Graveyard { get; set; }
-        private Random random = new Random();
+        private Random Random = new Random();
         public sbyte HitPoints { get; private set; } = 20;
-        private bool hasPlayedLand = false;
-        public string Name { get; set; }
+        private bool HasPlayedLand = false;
+        public string PlayerName { get; set; }
         public int Wins { get; set; }
 
         public GameEngine(IEnumerable<MagicCard> deck, string Name)
         {
             Deck = deck;
-            this.Name = Name;
-            Reset();
+            this.PlayerName = Name;           
         }
 
         public void CreateLibrary()
         {
             Library = new Library(
-                Deck.OrderBy(item => random.Next()));
+                Deck.OrderBy(item => Random.Next()));
         }
 
         public void Reset()
@@ -70,19 +69,19 @@ namespace MagicTheGathering.Engine
         public void Damage(CreatureCard card)
         {
             HitPoints -= card.Power;
-            Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerOne().Name}'s CreatureCard:\n");
+            Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerOne().PlayerName}'s CreatureCard:\n");
             card.Display();
-            Console.WriteLine($"afflicted DAMAGE of {card.Power} to Planeswalker {Name}.");
+            Console.WriteLine($"afflicted DAMAGE of {card.Power} to Planeswalker {PlayerName}.");
             Console.Write("Current GameState:\n");
-            Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerOne().Name} Current HitPoints: {GameState.GetInstance.PlayerOne().HitPoints} " +
-                $"\nPlaneswalker {GameState.GetInstance.PlayerTwo().Name} Current HitPoints: {GameState.GetInstance.PlayerTwo().HitPoints}");
+            Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerOne().PlayerName} Current HitPoints: {GameState.GetInstance.PlayerOne().HitPoints} " +
+                $"\nPlaneswalker {GameState.GetInstance.PlayerTwo().PlayerName} Current HitPoints: {GameState.GetInstance.PlayerTwo().HitPoints}");
             Console.WriteLine("Press enter to continue the battle...");
             Console.ReadLine();
         }
 
         private void PlaySpell(Collection<MagicCard> playableCards)
         {
-            var rand = random.Next(playableCards.Count);
+            var rand = Random.Next(playableCards.Count);
 
             if (playableCards[rand].CardType == CardType.Creature)
             {
@@ -129,7 +128,7 @@ namespace MagicTheGathering.Engine
 
         private bool CanPlayLand()
         {
-            return !hasPlayedLand
+            return !HasPlayedLand
                 && Hand.Any(card => card.CardType == CardType.Land);
         }
 
@@ -137,13 +136,29 @@ namespace MagicTheGathering.Engine
         {
             var landToPlay = Hand.First(card => card.CardType == CardType.Land);
             Battlefield.PlayLand(Hand.Play(landToPlay));
+
+            Console.WriteLine($"{this.PlayerName} Tapped Land Card: {landToPlay.Name}");
+            Console.ReadLine();
+
+            Console.WriteLine($"{this.PlayerName}'s Tapped Cards:");
+            foreach ( MagicCard card in Battlefield.Cards)
+            {
+                Console.WriteLine($"{card.Name}");
+            }
         }
 
         public void DrawCards(int number)
         {
+            Console.WriteLine($"{this.PlayerName} is Drawing {number} Card(s) from their library:");
             for (var i = 1; i <= number; i++)
             {
                 Hand.AddCard(Library.Draw());
+            }
+
+            Console.WriteLine($"{this.PlayerName}'s Hand:");
+            foreach (MagicCard card in Hand)
+            {
+                Console.WriteLine($"\t{card.Name}");
             }
         }
     }

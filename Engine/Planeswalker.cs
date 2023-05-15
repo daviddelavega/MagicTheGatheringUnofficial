@@ -18,7 +18,7 @@ namespace MagicTheGathering.Engine
         sbyte HitPoints { get; }
         Library Library { get; set; }
         int Wins { get; set; }
-        string Name { get; set; }
+        string PlayerName { get; set; }
 
         void Cast(MagicCard card);
         void CreateLibrary();

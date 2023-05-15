@@ -56,11 +56,11 @@ namespace MagicTheGathering.Engine
                 {
                     Console.WriteLine("\nUnofficial Magic The Gathering Simulated Game Results:");
 
-                    Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerOne().Name}'s HitPoints: {GameState.GetInstance.PlayerOne().HitPoints}.");
+                    Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerOne().PlayerName}'s HitPoints: {GameState.GetInstance.PlayerOne().HitPoints}.");
 
-                    Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerTwo().Name}'s HitPoints: {GameState.GetInstance.PlayerTwo().HitPoints}.");
+                    Console.WriteLine($"Planeswalker {GameState.GetInstance.PlayerTwo().PlayerName}'s HitPoints: {GameState.GetInstance.PlayerTwo().HitPoints}.");
 
-                    var winner = GameState.GetInstance.PlayerOne().HitPoints > GameState.GetInstance.PlayerTwo().HitPoints ? GameState.GetInstance.PlayerOne().Name : GameState.GetInstance.PlayerTwo().Name;
+                    var winner = GameState.GetInstance.PlayerOne().HitPoints > GameState.GetInstance.PlayerTwo().HitPoints ? GameState.GetInstance.PlayerOne().PlayerName : GameState.GetInstance.PlayerTwo().PlayerName;
 
                     ASCIIArt.DisplayEndGameMessage();
                     Console.WriteLine($"The Winner is Planeswalker {winner} ");

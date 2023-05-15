@@ -31,14 +31,14 @@ namespace MagicTheGathering.Engine
             {
                 gameIsOver = true;
                 GameState.GetInstance.PlayerOne().Wins += 1;
-                Console.WriteLine($"{GameState.GetInstance.PlayerOne().Name} HitPoints: {GameState.GetInstance.PlayerOne().HitPoints}.");
+                Console.WriteLine($"{GameState.GetInstance.PlayerOne().PlayerName} HitPoints: {GameState.GetInstance.PlayerOne().HitPoints}.");
 
             }
             else if (GameState.GetInstance.PlayerTwo().HitPoints < 1)
             {
                 gameIsOver = true;
                 GameState.GetInstance.PlayerTwo().Wins += 1;
-                Console.WriteLine($"{GameState.GetInstance.PlayerOne().Name} HitPoints: {GameState.GetInstance.PlayerTwo().HitPoints}.");
+                Console.WriteLine($"{GameState.GetInstance.PlayerOne().PlayerName} HitPoints: {GameState.GetInstance.PlayerTwo().HitPoints}.");
 
             }
         }
