@@ -9,13 +9,13 @@ namespace MagicTheGathering.Cards
      * Author: David DLVega
      * Date: May 13, 2023
      */
-    public class InstantCard : BaseMagicCard
+    public class InstantCard : MagicCard
     {
-        public override MagicCard Build()
+        public InstantCard(CardType _cardType) : base(_cardType) { }
+
+        public override ICard Build()
         {
-            this.CardType = CardType.Instant;
-            var instantModels = CardStore.Instance.getInstantModels();
-            InstantCardModel instantModel = instantModels.Find(item => item.Name == this.Name);
+            InstantCardModel instantModel = (InstantCardModel)CardStore.Instance.getMagicCardModel(this.CardType, this.Name);
 
             this
             .SetName(instantModel.Name)

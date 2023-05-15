@@ -6,9 +6,11 @@ namespace MagicTheGathering.Cards
      * Author: David DLVega
      * Date: May 13, 2023
      */
-    public class PlaneswalkerCard : BaseMagicCard
+    public class PlaneswalkerCard : MagicCard
     {
-        public override MagicCard Build()
+        public PlaneswalkerCard(CardType _cardType) : base(_cardType) { }
+
+        public override ICard Build()
         {
             throw new NotImplementedException();
         }

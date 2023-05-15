@@ -8,7 +8,7 @@ namespace MagicTheGathering.Models
      * Date: May 13, 2023
      * Single Responsibility: Plain Ole' C# Obect (Poco) to facilitate the objectification of the yaml creature data 
      */
-    public class CreatureModel : BaseMagicCardModel
+    public class CreatureCardModel : BaseMagicCardModel
     {           
         public List<CreatureTypes> CreatureTypes { get; set; }
         public sbyte Power { get; set; }

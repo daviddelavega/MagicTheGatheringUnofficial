@@ -1,4 +1,5 @@
-﻿using MagicTheGathering.Models;
+﻿using MagicTheGathering.Cards;
+using MagicTheGathering.Models;
 using System.Collections.Generic;
 
 namespace MagicTheGathering.Utilities
@@ -7,19 +8,19 @@ namespace MagicTheGathering.Utilities
      * Author: David DLVega
      * Date: May 13, 2023
      */
-    public class CardStore
+    public sealed class CardStore
     {
-        private static CardStore _instance;
-        private List<CreatureModel> CreatureModels;
-        private List<LandModel> BasicLandModels;
+        private static CardStore? _instance;
+        private List<CreatureCardModel> CreatureCardModels;
+        private List<LandModel> BasicLandCardModels;
         private List<SorceryCardModel> SorceryCardModels;
         private List<InstantCardModel> InstantCardModels;
         private List<ArtifactCardModel> ArtifactCardModels;
 
         private CardStore()
         {
-            CreatureModels = YamlReader.ReadCreatureCardData();
-            BasicLandModels = YamlReader.ReadBasicLandCardData();
+            CreatureCardModels = YamlReader.ReadCreatureCardData();
+            BasicLandCardModels = YamlReader.ReadBasicLandCardData();
             SorceryCardModels = YamlReader.ReadSorceryCardData();
             InstantCardModels = YamlReader.ReadInstantCardData();
             ArtifactCardModels = YamlReader.ReadArtifactCardData();
@@ -37,14 +38,37 @@ namespace MagicTheGathering.Utilities
             }
         }
 
-        public List<CreatureModel> getCreatureModels()
+        public CardModel getMagicCardModel(CardType cardType, string cardName)
         {
-            return CreatureModels;
+            CardModel? cardModel = null;
+
+            switch(cardType)
+            {
+                case CardType.Creature:
+                    cardModel = CreatureCardModels.Find(item => item.Name == cardName);
+                    break;
+                case CardType.Land:
+                    cardModel = BasicLandCardModels.Find(item => item.Name == cardName);
+                    break;
+                case CardType.Sorcery:
+                    cardModel = SorceryCardModels.Find(item => item.Name == cardName);
+                    break;
+                case CardType.Instant:
+                    cardModel = InstantCardModels.Find(item => item.Name == cardName);
+                    break;
+                case CardType.Artifact:
+                    cardModel = ArtifactCardModels.Find(item => item.Name == cardName);
+                    break;
+                default:
+                    throw new ArgumentNullException($"No such CardType:{cardType}");
+            }
+
+            return cardModel;
         }
 
         public List<LandModel> getBasicLandModels()
         {
-            return BasicLandModels;
+            return BasicLandCardModels;
         }
 
         public List<SorceryCardModel> getSorceryModels()

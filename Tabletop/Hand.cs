@@ -8,24 +8,24 @@ namespace MagicTheGathering
      * Author: David DLVega
      * Date: May 13, 2023
      */
-    public class Hand : Collection<BaseMagicCard>
+    public class Hand : Collection<MagicCard>
     {
         private Random Random = new Random();
 
-        public void AddCard(BaseMagicCard card)
+        public void AddCard(MagicCard card)
         {
             this.Add( card );
         }
 
-        public BaseMagicCard Play(BaseMagicCard card)
+        public MagicCard Play(MagicCard card)
         {
             this.Remove( card );
             return card;
         }
 
-        internal BaseMagicCard Discard(BaseMagicCard card = null)
+        internal MagicCard Discard(MagicCard card = null)
         {
-            BaseMagicCard discard;
+            MagicCard discard;
 
             if (card == null)
             {

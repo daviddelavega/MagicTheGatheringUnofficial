@@ -8,9 +8,9 @@ namespace MagicTheGathering.Factories
      */
     class LandCardFactory : MagicCardFactory
     {
-        public override BaseMagicCard CreateMagicCard()
+        public override MagicCard CreateMagicCard()
         {
-            return new LandCard();
+            return new LandCard(CardType.Land);
         }
     }
 }

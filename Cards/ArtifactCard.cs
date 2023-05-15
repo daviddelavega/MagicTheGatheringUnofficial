@@ -10,15 +10,15 @@ namespace MagicTheGathering.Cards
     * Date: May 13, 2023
     * The Single Responsibility of this Class is to Build a Magic Artifact Card Object:
     * The ArtifactCard class can represent any Magic Card that is of Type Artifact. 
-    * All Artifact Card attributes come from the Parent BaseMagicCard class.
+    * All Artifact Card attributes come from the Parent MagicCard class.
     */
-    public class ArtifactCard : BaseMagicCard
+    public class ArtifactCard : MagicCard
     {
-        public override MagicCard Build()
-        {
-            this.CardType = CardType.Artifact;
-            var artifactModels = CardStore.Instance.getArtifactModels();
-            ArtifactCardModel artifactModel = artifactModels.Find(item => item.Name == this.Name);           
+        public ArtifactCard(CardType _cardType) : base(_cardType) { }
+
+        public override ICard Build()
+        {         
+            ArtifactCardModel artifactModel = (ArtifactCardModel)CardStore.Instance.getMagicCardModel(this.CardType, this.Name);
 
             this            
             .SetName(artifactModel.Name)

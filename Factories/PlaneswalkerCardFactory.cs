@@ -9,9 +9,9 @@ namespace MagicTheGathering.Factories
      */
     class PlaneswalkerCardFactory : MagicCardFactory
     {
-        public override BaseMagicCard CreateMagicCard()
+        public override MagicCard CreateMagicCard()
         {
-            return new PlaneswalkerCard();
+            return new PlaneswalkerCard(CardType.Planeswalker);
         }
     }
 }

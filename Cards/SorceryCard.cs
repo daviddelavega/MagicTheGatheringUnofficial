@@ -9,13 +9,13 @@ namespace MagicTheGathering.Cards
      * Author: David DLVega
      * Date: May 13, 2023
      */
-    public class SorceryCard : BaseMagicCard
+    public class SorceryCard : MagicCard
     {
-        public override MagicCard Build()
-        {
-            this.CardType = CardType.Sorcery;
-            var sorceryModels = CardStore.Instance.getSorceryModels();
-            SorceryCardModel sorceryModel = sorceryModels.Find(item => item.Name == this.Name);
+        public SorceryCard(CardType _cardType) : base(_cardType) { }
+
+        public override ICard Build()
+        {           
+            SorceryCardModel sorceryModel = (SorceryCardModel)CardStore.Instance.getMagicCardModel(this.CardType, this.Name);
 
             this
             .SetName(sorceryModel.Name)

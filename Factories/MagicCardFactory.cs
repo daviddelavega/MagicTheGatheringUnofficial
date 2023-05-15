@@ -12,6 +12,6 @@ namespace MagicTheGathering.Factories
      */
     abstract class MagicCardFactory
     {
-        public abstract BaseMagicCard CreateMagicCard();
+        public abstract MagicCard CreateMagicCard();
     }
 }

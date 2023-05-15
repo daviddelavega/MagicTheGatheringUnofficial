@@ -12,7 +12,7 @@ namespace MagicTheGathering.Engine
     public interface Planeswalker
     {
         Battlefield Battlefield { get; set; }
-        IEnumerable<BaseMagicCard> Deck { get; set; }
+        IEnumerable<MagicCard> Deck { get; set; }
         Graveyard Graveyard { get; set; }
         Hand Hand { get; set; }
         sbyte HitPoints { get; }
@@ -20,7 +20,7 @@ namespace MagicTheGathering.Engine
         int Wins { get; set; }
         string Name { get; set; }
 
-        void Cast(BaseMagicCard card);
+        void Cast(MagicCard card);
         void CreateLibrary();
         void Damage(CreatureCard card);
         void DoMainPhaseActions();

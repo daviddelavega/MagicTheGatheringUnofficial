@@ -7,18 +7,18 @@ namespace MagicTheGathering.Tabletop
      * Author: David DLVega
      * Date: May 13, 2023
      */
-    public class Library : Stack<BaseMagicCard>
+    public class Library : Stack<MagicCard>
     {
         public string UserName { get; set; }
 
-        public IEnumerable<BaseMagicCard> Cards { get; }
+        public IEnumerable<MagicCard> Cards { get; }
 
-        public Library(IEnumerable<BaseMagicCard> _cards) : base(_cards)
+        public Library(IEnumerable<MagicCard> _cards) : base(_cards)
         {
             this.Cards = _cards;
         }
 
-        public BaseMagicCard Draw()
+        public MagicCard Draw()
         {
             return this.Pop();
         }

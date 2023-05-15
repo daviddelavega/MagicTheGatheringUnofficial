@@ -6,7 +6,7 @@ namespace MagicTheGathering
      * Date: May 13, 2023
      * This class's single responsibility is to start the game.
      * It provides the location of the Player's library data File
-     * to the created GameManager Object and Starts the game.
+     * to the GameManager Object and Starts the game.
      */
     class GameProgram
     {

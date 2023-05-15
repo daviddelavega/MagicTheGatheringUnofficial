@@ -11,7 +11,7 @@ namespace MagicTheGathering.Zones
      */
     public class Battlefield
     {
-        public ICollection<BaseMagicCard> Cards = new Collection<BaseMagicCard>();
+        public ICollection<MagicCard> Cards = new Collection<MagicCard>();
 
         public void Untap()
         {
@@ -21,7 +21,7 @@ namespace MagicTheGathering.Zones
             }
         }
 
-        public void Play(BaseMagicCard card)
+        public void Play(MagicCard card)
         {
             this.Cards.Add( card );
 
@@ -38,7 +38,7 @@ namespace MagicTheGathering.Zones
             }
         }
 
-        public void PlayLand(BaseMagicCard card)
+        public void PlayLand(MagicCard card)
         {
             this.Cards.Add(card);
         }

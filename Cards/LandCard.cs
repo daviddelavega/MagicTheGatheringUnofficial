@@ -8,17 +8,17 @@ namespace MagicTheGathering.Cards
      * Author: David DLVega
      * Date: May 13, 2023
      */
-    public class LandCard : BaseMagicCard
+    public class LandCard : MagicCard
     {       
         private protected string LandType { get; set; }
 
         private protected Color Color { get; set; }
 
-        public override MagicCard Build()
+        public LandCard(CardType cardType) : base(cardType) { }
+
+        public override ICard Build()
         {
-            this.CardType = CardType.Land;
-            var basicLandModels = CardStore.Instance.getBasicLandModels();
-            LandModel basicLandModel = basicLandModels.Find(item => item.Name == this.Name);
+            LandModel basicLandModel = (LandModel)CardStore.Instance.getMagicCardModel(this.CardType, this.Name);
 
             this
             .SetBasicLandType(basicLandModel.LandType)

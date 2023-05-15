@@ -30,7 +30,7 @@ namespace MagicTheGathering.Factories
 
             foreach (var playerModel in this.players) 
             {
-                List<BaseMagicCard> magicCards = new();                
+                List<MagicCard> magicCards = new();                
 
                 foreach (var libraryCardModel in playerModel.Library)
                 {

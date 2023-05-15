@@ -12,9 +12,9 @@ namespace MagicTheGathering.Factories
      */
     class CreatureCardFactory : MagicCardFactory
     {       
-        public override BaseMagicCard CreateMagicCard()
+        public override MagicCard CreateMagicCard()
         {
-            return new CreatureCard();       
+            return new CreatureCard(CardType.Creature);       
         }
     }
 }

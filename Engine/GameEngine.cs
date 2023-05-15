@@ -15,7 +15,7 @@ namespace MagicTheGathering.Engine
     public class GameEngine : Planeswalker
     {
         public Battlefield Battlefield { get; set; } = new Battlefield();
-        public IEnumerable<BaseMagicCard> Deck { get; set; }
+        public IEnumerable<MagicCard> Deck { get; set; }
         public Library Library { get; set; }
         public Hand Hand { get; set; }
         public Graveyard Graveyard { get; set; }
@@ -25,7 +25,7 @@ namespace MagicTheGathering.Engine
         public string Name { get; set; }
         public int Wins { get; set; }
 
-        public GameEngine(IEnumerable<BaseMagicCard> deck, string Name)
+        public GameEngine(IEnumerable<MagicCard> deck, string Name)
         {
             Deck = deck;
             this.Name = Name;
@@ -80,7 +80,7 @@ namespace MagicTheGathering.Engine
             Console.ReadLine();
         }
 
-        private void PlaySpell(Collection<BaseMagicCard> playableCards)
+        private void PlaySpell(Collection<MagicCard> playableCards)
         {
             var rand = random.Next(playableCards.Count);
 
@@ -94,14 +94,14 @@ namespace MagicTheGathering.Engine
             }
         }
 
-        public void Cast(BaseMagicCard card)
+        public void Cast(MagicCard card)
         {
             card.ResolveSpecialAbilities();
         }
 
-        private Collection<BaseMagicCard> PlayableSpells()
+        private Collection<MagicCard> PlayableSpells()
         {
-            Collection<BaseMagicCard> cards = new Collection<BaseMagicCard>();
+            Collection<MagicCard> cards = new Collection<MagicCard>();
 
             foreach (var card in Hand)
             {

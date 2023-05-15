@@ -25,7 +25,7 @@ namespace MagicTheGathering.Phases
                     && !card.Tapped
                 );
 
-            foreach (var creature in creatures ?? Enumerable.Empty<BaseMagicCard>())
+            foreach (var creature in creatures ?? Enumerable.Empty<MagicCard>())
             {
                 var creatureCard = creature as CreatureCard;
                 creature.Attack();

@@ -8,9 +8,9 @@ namespace MagicTheGathering.Factories
      */
     class InstantCardFactory : MagicCardFactory
     {
-        public override BaseMagicCard CreateMagicCard()
+        public override MagicCard CreateMagicCard()
         {
-            return new InstantCard();
+            return new InstantCard(CardType.Instant);
         }
     }
 }

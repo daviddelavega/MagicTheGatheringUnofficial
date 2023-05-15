@@ -12,7 +12,7 @@ namespace MagicTheGathering.Cards
      * Magic _Card that is of Type Creature. Creature Magic Cards have Power, Toughness values.
      * Creatures can attack, block, and posses various abilities( abilites are stored in the _Card Text).
      */
-    public class CreatureCard : BaseMagicCard, Tappable, Attacks, Blocks
+    public class CreatureCard : MagicCard, Tappable, Attacks, Blocks
     {
         private protected List<CreatureTypes> CreatureTypes { get; set; }
 
@@ -23,7 +23,10 @@ namespace MagicTheGathering.Cards
         private protected bool HasVariableToughness { get; set; } = false;
 
         private protected bool HasVariablePower { get; set; } = false;
-      
+
+        public CreatureCard(CardType _cardType) : base(_cardType)
+        {           
+        }      
 
         public void Block()
         {
@@ -70,10 +73,8 @@ namespace MagicTheGathering.Cards
         }
 
         public override CreatureCard Build()
-        {
-            this.CardType = CardType.Creature;
-            var creatureModels = CardStore.Instance.getCreatureModels();
-            CreatureModel creatureModel = creatureModels.Find(item => item.Name == this.Name);            
+        {           
+            CreatureCardModel creatureModel = (CreatureCardModel)CardStore.Instance.getMagicCardModel(this.CardType, this.Name);                     
 
             this            
             .SetCreatureTypes(creatureModel.CreatureTypes)

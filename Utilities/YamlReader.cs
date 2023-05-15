@@ -28,11 +28,11 @@ namespace MagicTheGathering.Utilities
                 .Build();
         }
 
-        public static List<CreatureModel> ReadCreatureCardData()
+        public static List<CreatureCardModel> ReadCreatureCardData()
         {
             using (var reader = new StreamReader(CreatureFilePath))
             {
-                return Deserializer.Deserialize<List<CreatureModel>>(reader);                         
+                return Deserializer.Deserialize<List<CreatureCardModel>>(reader);                         
             }             
         }
 
