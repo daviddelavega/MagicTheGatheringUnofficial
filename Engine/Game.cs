@@ -3,7 +3,8 @@
     /*
      * Author: David DLVega
      * Date: May 13, 2023
-     * The Single Responsibility of the Game class is to further facilitate the each player's tun in the game.
+     * The Single Responsibility of the Game class is to further facilitate the each player's tun in the game 
+     * to properly keep track of the conditions in the game
      */
     public class Game
     {

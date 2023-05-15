@@ -6,6 +6,7 @@ namespace MagicTheGathering
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Hand class manages each players Card Hand throughout the game.
      */
     public class Hand : Collection<MagicCard>
     {

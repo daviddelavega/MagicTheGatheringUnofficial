@@ -8,7 +8,7 @@ namespace MagicTheGathering.Factories
      * Follows the Abstract Factory Design Pattern:
      * This class is the Concrete Factory portion of the design pattern.
      * This abstract class facilitates the creation of all Artifact Magic Card Objects without specifying the concrete type until run-time.
-     * Also supports Single Responsibility principle.
+     * Also supports Single Responsibility principle in SOLID.
      */
     class ArtifactCardFactory : MagicCardFactory
     {

@@ -6,6 +6,7 @@ namespace MagicTheGathering.Zones
     /*
      * Author: David DLVega
      * Date: May 13, 2023
+     * The Battlefield class single responsibility is to manage the Game's current cards in battle.
      */
     public class Battlefield
     {

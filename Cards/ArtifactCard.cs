@@ -9,6 +9,7 @@ namespace MagicTheGathering.Cards
     * The Single Responsibility of this Class is to Build a Magic Artifact Card Object:
     * The ArtifactCard class can represent any Magic Card that is of Type Artifact. 
     * All Artifact Card attributes come from the Parent MagicCard class.
+    * This supports Inheritance principle of code re-use
     */
     public class ArtifactCard : MagicCard
     {
