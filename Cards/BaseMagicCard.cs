@@ -14,7 +14,7 @@ namespace MagicTheGathering.Cards
      */
     public abstract class BaseMagicCard : MagicCard
     {
-        //a debug flag to display library card data. false means library card data will not be displayed.
+        //a debug flag to display library card data. false = library card data will not be displayed.
         public bool ShowLibrary = false;
         /* 
          * common attributes found in Standard Magic Cards
