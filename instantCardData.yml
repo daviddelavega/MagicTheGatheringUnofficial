@@ -1,0 +1,35 @@
+- name: Lightning Bolt
+  manaCost:   
+    Red: 1   
+  cardText:
+    Damage_3: Lightning Bolt deals 3 damage to any target.
+    FlavorText: |
+      The sparkmage shrieked, calling on the rage of the storms of his youth. 
+      To his surprise, the sky responded with a fierce energy he'd never thought to see again.    
+  edition: |
+    Game Night: Free-For-All 
+  collectorNumber: 83
+  cardRarity: Uncommon
+  artistInfo: Christopher Moeller
+
+- name: Opt 
+  manaCost:     
+    Blue: 1   
+  cardText:
+    Scry_1: (Look at the top of your library. You may put that card on the bottom of your library.)
+    FlavorText: The crystal pulsed with the power of Teferi's Planeswalker spark. Had Jhoira given him a blessing or a curse?    
+  edition: Core Set 2021 
+  collectorNumber: 59
+  cardRarity: Common
+  artistInfo: Tyler Jacobson
+
+- name: Giant Growth 
+  manaCost:     
+    Green: 1   
+  cardText:
+    Boost_3: Target creature gets +3/+3 until end of turn.
+    FlavorText: Imagine being scared of pixies. Just smoosh them under your boot! —Kerish, Urzan mechanist    
+  edition: The Brothers War 
+  collectorNumber: 183
+  cardRarity: Common
+  artistInfo: Raoul Vitale

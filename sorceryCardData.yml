@@ -1,0 +1,34 @@
+- name: Time Walk 
+  manaCost:
+    Any: 1    
+    Blue: 1   
+  cardText:
+    ExtraTurn: Take an extra turn after this one.    
+  edition: Vintage Masters 
+  collectorNumber: 2
+  cardRarity: Bonus
+  artistInfo: Chris Rahn
+
+- name: Wrath of God 
+  manaCost:
+    Any: 2    
+    White: 2   
+  cardText:
+    DestroyCreatures: Destroy all creatures. They can't be regenerated.    
+  edition: Dominaria Remastered 
+  collectorNumber: 37
+  cardRarity: Rare
+  artistInfo: Kev Walker
+
+- name: Rampant Growth 
+  manaCost:
+    Any: 1    
+    Green: 1   
+  cardText:
+    LandSearch_1: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+    FlavorText: |
+      Upon impact with a planet's surface, a tyrannocyte's bloated belly bursts open, disgorging a horde of Tyranid invaders.
+  edition: Warhammer 40,000 Commander
+  collectorNumber: 220
+  cardRarity: Common
+  artistInfo: Cory Trego-Erdner

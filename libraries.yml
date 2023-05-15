@@ -1,0 +1,51 @@
+- userName: SpellbindingTester
+  library:
+    - cardType: Creature
+      cards:
+        Shivan Dragon: 4
+        Snapcaster Mage: 4
+        Sentinel Spider: 6
+        Ilysian Caryatid: 5        
+    - cardType: Land
+      cards:
+        Forest: 10     
+        Mountain: 10    
+        Island: 10
+    - cardType: Sorcery
+      cards:
+        Time Walk: 1
+        Wrath of God: 1
+    - cardType: Instant
+      cards:  
+        Lightning Bolt: 5
+        Opt: 5
+    - cardType: Artifact
+      cards:
+        Black Lotus: 1
+        Sol Ring: 3   
+        
+- userName: AutomagicianTester
+  library:
+    - cardType: Creature
+      cards:
+        Shivan Dragon: 3
+        Snapcaster Mage: 4
+        Sentinel Spider: 7
+        Ilysian Caryatid: 5        
+    - cardType: Land
+      cards:
+        Forest: 15     
+        Mountain: 10    
+        Island: 10
+    - cardType: Sorcery
+      cards:
+        Time Walk: 1
+        Wrath of God: 1
+    - cardType: Instant
+      cards:  
+        Lightning Bolt: 5
+        Opt: 5
+    - cardType: Artifact
+      cards:
+        Black Lotus: 1
+        Sol Ring: 3   

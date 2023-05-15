@@ -1,0 +1,88 @@
+﻿- name: Shivan Dragon  
+  manaCost:
+    Any: 4    
+    Red: 2 
+  creatureTypes:
+    - Dragon
+  cardText:
+    Flying: This creature can't be blocked except by creatures with flying or reach
+    Boost: Shivan Dragon gets +1/+0 until end of turn
+    FlavorText: The undisputed master of the mountains
+    PowerBoost: 1
+    ToughnessBoost: 0  
+    AbilityCost: Red
+  power: 5
+  toughness: 5
+  edition: Magic_Origins
+  hasVariableToughness: False
+  hasVariablePower: False
+  collectorNumber: 285
+  cardRarity: Rare
+  artistInfo: Donato Giancola
+  
+- name: Snapcaster Mage
+  manaCost:
+    Any: 1
+    Blue: 1
+  creatureTypes:
+    - Human
+    - Wizard
+  cardText:
+    Flash: |
+      When Snapcaster Mage enters the battlefield, target instant or sorcery card in your graveyard
+      gains flashback until end of turn. The flashback cost is equal to its mana cost. 
+      (You may cast that card from your graveyard for its flashback cost, Then exile it.)    
+    AbilityCost: graveyard
+  power: 2
+  toughness: 1
+  edition: Modern_Masters_2017
+  hasVariableToughness: False
+  hasVariablePower: False
+  collectorNumber: 050
+  cardRarity: MythicRare
+  artistInfo: Ryan Alexander Lee
+
+- name: Sentinel Spider
+  manaCost:
+    Any: 3
+    Green: 2
+  creatureTypes:
+    - Spider
+  cardText:
+    Vigilance: Attacking doesn't cause a creature with vigilance to tap.  
+    Reach: A creature with reach can block creatures with flying.
+    FlavorText: | 
+      Your first reaction may be to stand very still and hope she
+      didn't see you. Trust me, she did -Endril, Kalonian naturalist
+  power: 4
+  toughness: 4
+  edition: Arena Base Set
+  hasVariableToughness: False
+  hasVariablePower: False
+  collectorNumber: 104
+  cardRarity: Uncommon
+  artistInfo: Vincent Proce
+
+- name: Ilysian Caryatid
+  manaCost:
+    Any: 1
+    Green: 1
+  creatureTypes:
+    - Plant
+  cardText:
+    ManaAbility: |
+      Add one mana of any color. If you control a creature with power 4 or greater, add two mana of any one color instead.
+    Reach: A creature with reach can block creatures with flying.
+    FlavorText: | 
+      Those who die as heroes are permitted to dwell in Ilysia, a protected realm of the Underworld 
+      as tranquil and vibrant as the rest is bleak.
+  power: 1
+  toughness: 1
+  edition: Theros Beyond Death
+  hasVariableToughness: False
+  hasVariablePower: False
+  collectorNumber: 174
+  cardRarity: Common
+  artistInfo: Winona Nelson
+
+
