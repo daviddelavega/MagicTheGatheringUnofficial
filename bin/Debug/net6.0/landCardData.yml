@@ -1,0 +1,22 @@
+- name: Plains 
+  landType: Plains  
+  color: White
+
+- name: Island 
+  landType: Island  
+  color: Blue
+
+- name: Swamp 
+  landType: Swap  
+  color: Black
+
+- name: Mountain 
+  landType: Mountain  
+  color: Red
+
+- name: Forest 
+  landType: Forest  
+  color: Green
+
+- name: Wastes  
+  color: Colorless

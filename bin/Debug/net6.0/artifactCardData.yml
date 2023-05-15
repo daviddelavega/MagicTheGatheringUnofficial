@@ -1,0 +1,20 @@
+- name: Black Lotus 
+  manaCost:
+    Any: 0      
+  cardText:
+    AddAnyMana_3: |
+      Sacrifice Black Lotus: Add three mana of any one color. 
+  edition: Vintage Masters
+  collectorNumber: 4
+  cardRarity: Bonus
+  artistInfo: Chris Rahn
+
+- name: Sol Ring
+  manaCost:
+    Any: 1  
+  cardText:
+    AddColorless_2: Add 2 colorless mana to your mana pool.    
+  edition: March of the Machine Commander
+  collectorNumber: 381
+  cardRarity: Rare
+  artistInfo: Mike Bierek

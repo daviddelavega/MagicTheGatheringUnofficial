@@ -1,0 +1,59 @@
+- userName: underscore
+  deck:
+    - cardType: Creature
+      cards:
+        Shivan Dragon: 3
+        Snapcaster Mage: 4
+        Sentinel Spider: 5
+        Ilysian Caryatid: 5        
+    - cardType: Land
+      cards:
+        Forest: 10     
+        Mountain: 10    
+        Island: 10
+    - cardType: Sorcery
+      cards:
+        Time Walk: 1
+        Wrath of God: 1
+    - cardType: Instant
+      cards:  
+        Lightning Bolt: 5
+        Opt: 5
+    - cardType: Artifact
+      cards:
+        Black Lotus: 2
+        Sol Ring: 3
+    - cardType: Planeswalker
+      cards:
+        Liliana of the Veil: 1
+        Karn Liberated: 1  
+- userName: zod
+  deck:
+    - cardType: Creature
+      cards:
+        Shivan Dragon: 3
+        Snapcaster Mage: 4
+        Spider: 5
+        Plant: 5        
+    - cardType: Land
+      cards:
+        Forest: 10     
+        Mountain: 10    
+        Island: 10
+    - cardType: Sorcery
+      cards:
+        Time Walk: 5
+        Wrath of God: 5
+    - cardType: Instant
+      cards:
+        Force of Will: 10
+        Wrath of God: 5
+        Lightning Bolt: 5
+    - cardType: Artifact
+      cards:
+        Black Lotus: 2
+        Sol Ring: 3
+    - cardType: Planeswalker
+      cards:
+        Liliana of the Veil: 1
+        Karn Liberated: 1

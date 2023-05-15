@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicTheGatheringUnofficial", "MagicTheGatheringUnofficial.csproj", "{3E006BF4-ABE8-47B7-80DE-720E03E106B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E006BF4-ABE8-47B7-80DE-720E03E106B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E006BF4-ABE8-47B7-80DE-720E03E106B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E006BF4-ABE8-47B7-80DE-720E03E106B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E006BF4-ABE8-47B7-80DE-720E03E106B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4E03371-0635-4232-8EE0-C7E3C53BD704}
+	EndGlobalSection
+EndGlobal
